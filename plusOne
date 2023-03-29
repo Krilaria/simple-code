@@ -1,0 +1,16 @@
+class Solution(object):
+    def plusOne(self, digits):
+        self.digits=digits
+        b=int(0)
+        c=[]
+        digits= [int(i) for i in digits]
+
+        for i in range(len(digits)):
+            b+=digits[-1-i]*10**i
+        b+=1
+
+        b=str(b)
+        c=list(b)
+        c=[int(i) for i in c]
+
+        return c
