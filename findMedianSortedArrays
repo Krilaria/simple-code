@@ -1,0 +1,25 @@
+import math as ma
+
+class Solution(object):
+    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
+        self.nums1=nums1
+        self.nums2=nums2
+        s=nums1+nums2
+        s=sorted(s)
+
+        if (len(s)-1)%2==0:
+            m=float(s[int(len(s)/2)-1])
+        else:
+            m=(int(s[ma.ceil(len(s)/2)-1])+int(s[ma.floor(len(s)/2)]))/2
+        #m=median(s)
+                
+        return m
+
+# Create an instance of the class
+object = Solution()
+
+# Call the function with a list of digits
+result = object.findMedianSortedArrays(input().split(),input().split())
+
+# Print the output returned by the function
+print(result)
